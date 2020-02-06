@@ -1,0 +1,284 @@
+nohup: ignoring input
+reading properties from: /home/pengchy/.intermine/fawmine.properties
+
+Wed Feb  5 17:57:39 CST 2020
+
+
+running: psql -U postgres -h localhost -d postgres -l
+
+not creating fawmine as it already exists
+
+
+restarting using database: fawmine:faw-homolog-yeast
+
+Wed Feb  5 17:57:39 CST 2020
+
+
+running: dropdb -U postgres -h localhost fawmine
+
+Wed Feb  5 17:57:40 CST 2020
+
+
+running: createdb -E SQL_ASCII -U postgres -h localhost -T fawmine:faw-homolog-yeast fawmine
+
+Wed Feb  5 17:58:55 CST 2020
+
+finished restore - now analysing
+
+
+Wed Feb  5 17:58:55 CST 2020
+
+finished analysing
+
+
+Wed Feb  5 17:58:55 CST 2020
+
+starting command: /home/pengchy/soft/intermine.4.0/git/fawmine/gradlew --stacktrace --no-daemon --stacktrace integrate -Psource=faw-network-ppi
+
+Wed Feb  5 18:01:15 CST 2020
+
+finished
+
+
+action faw-network-ppi took 140 seconds
+
+Wed Feb  5 18:01:15 CST 2020
+
+starting command: /home/pengchy/soft/intermine.4.0/git/fawmine/gradlew --stacktrace --no-daemon --stacktrace integrate -Psource=faw-network-coexp
+
+Wed Feb  5 18:07:43 CST 2020
+
+finished
+
+
+action faw-network-coexp took 388 seconds
+
+Wed Feb  5 18:07:43 CST 2020
+
+
+making db copy: createdb -E SQL_ASCII -U postgres -h localhost -T fawmine fawmine:faw-network-coexp
+
+Wed Feb  5 18:08:48 CST 2020
+
+finished backup
+
+
+action faw-network-coexp-dump took 65 seconds
+
+Wed Feb  5 18:08:48 CST 2020
+
+starting command: /home/pengchy/soft/intermine.4.0/git/fawmine/gradlew --stacktrace --no-daemon --stacktrace integrate -Psource=faw-gene-expression-PRJNA408280
+
+Wed Feb  5 18:19:08 CST 2020
+
+finished
+
+
+action faw-gene-expression-PRJNA408280 took 620 seconds
+
+Wed Feb  5 18:19:08 CST 2020
+
+
+making db copy: createdb -E SQL_ASCII -U postgres -h localhost -T fawmine fawmine:faw-gene-expression-PRJNA408280
+
+Wed Feb  5 18:20:41 CST 2020
+
+finished backup
+
+
+action faw-gene-expression-PRJNA408280-dump took 93 seconds
+
+Wed Feb  5 18:20:41 CST 2020
+
+starting command: /home/pengchy/soft/intermine.4.0/git/fawmine/gradlew --stacktrace --no-daemon --stacktrace integrate -Psource=faw-gene-expression-SE_E-MTAB-6540
+
+Wed Feb  5 18:26:15 CST 2020
+
+finished
+
+
+action faw-gene-expression-SE_E-MTAB-6540 took 334 seconds
+
+Wed Feb  5 18:26:15 CST 2020
+
+starting command: /home/pengchy/soft/intermine.4.0/git/fawmine/gradlew --stacktrace --no-daemon --stacktrace integrate -Psource=faw-gene-expression-SE_PRJNA299878
+
+Wed Feb  5 18:27:52 CST 2020
+
+finished
+
+
+action faw-gene-expression-SE_PRJNA299878 took 97 seconds
+
+Wed Feb  5 18:27:52 CST 2020
+
+starting command: /home/pengchy/soft/intermine.4.0/git/fawmine/gradlew --stacktrace --no-daemon --stacktrace integrate -Psource=faw-gene-expression-Sf21
+
+Wed Feb  5 18:29:13 CST 2020
+
+finished
+
+
+action faw-gene-expression-Sf21 took 81 seconds
+
+Wed Feb  5 18:29:13 CST 2020
+
+
+making db copy: createdb -E SQL_ASCII -U postgres -h localhost -T fawmine fawmine:faw-gene-expression-Sf21
+
+Wed Feb  5 18:30:37 CST 2020
+
+finished backup
+
+
+action faw-gene-expression-Sf21-dump took 84 seconds
+
+Wed Feb  5 18:30:37 CST 2020
+
+starting command: /home/pengchy/soft/intermine.4.0/git/fawmine/gradlew --stacktrace --no-daemon --stacktrace integrate -Psource=entrez-organism
+
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':dbmodel:retrieveSingleSource'.
+> Exception while reading from: /home/pengchy/soft/intermine.4.0/git/fawmine/organisms.xml
+
+* Try:
+Run with --info or --debug option to get more log output.
+
+* Exception is:
+org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':dbmodel:retrieveSingleSource'.
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeActions(ExecuteActionsTaskExecuter.java:100)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:70)
+	at org.gradle.api.internal.tasks.execution.SkipUpToDateTaskExecuter.execute(SkipUpToDateTaskExecuter.java:63)
+	at org.gradle.api.internal.tasks.execution.ResolveTaskOutputCachingStateExecuter.execute(ResolveTaskOutputCachingStateExecuter.java:54)
+	at org.gradle.api.internal.tasks.execution.ValidatingTaskExecuter.execute(ValidatingTaskExecuter.java:58)
+	at org.gradle.api.internal.tasks.execution.SkipEmptySourceFilesTaskExecuter.execute(SkipEmptySourceFilesTaskExecuter.java:88)
+	at org.gradle.api.internal.tasks.execution.ResolveTaskArtifactStateTaskExecuter.execute(ResolveTaskArtifactStateTaskExecuter.java:52)
+	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:52)
+	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:54)
+	at org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter.execute(ExecuteAtMostOnceTaskExecuter.java:43)
+	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:34)
+	at org.gradle.execution.taskgraph.DefaultTaskGraphExecuter$EventFiringTaskWorker$1.run(DefaultTaskGraphExecuter.java:248)
+	at org.gradle.internal.progress.DefaultBuildOperationExecutor$RunnableBuildOperationWorker.execute(DefaultBuildOperationExecutor.java:336)
+	at org.gradle.internal.progress.DefaultBuildOperationExecutor$RunnableBuildOperationWorker.execute(DefaultBuildOperationExecutor.java:328)
+	at org.gradle.internal.progress.DefaultBuildOperationExecutor.execute(DefaultBuildOperationExecutor.java:197)
+	at org.gradle.internal.progress.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:107)
+	at org.gradle.execution.taskgraph.DefaultTaskGraphExecuter$EventFiringTaskWorker.execute(DefaultTaskGraphExecuter.java:241)
+	at org.gradle.execution.taskgraph.DefaultTaskGraphExecuter$EventFiringTaskWorker.execute(DefaultTaskGraphExecuter.java:230)
+	at org.gradle.execution.taskgraph.DefaultTaskPlanExecutor$TaskExecutorWorker.processTask(DefaultTaskPlanExecutor.java:124)
+	at org.gradle.execution.taskgraph.DefaultTaskPlanExecutor$TaskExecutorWorker.access$200(DefaultTaskPlanExecutor.java:80)
+	at org.gradle.execution.taskgraph.DefaultTaskPlanExecutor$TaskExecutorWorker$1.execute(DefaultTaskPlanExecutor.java:105)
+	at org.gradle.execution.taskgraph.DefaultTaskPlanExecutor$TaskExecutorWorker$1.execute(DefaultTaskPlanExecutor.java:99)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionPlan.execute(DefaultTaskExecutionPlan.java:625)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionPlan.executeWithTask(DefaultTaskExecutionPlan.java:580)
+	at org.gradle.execution.taskgraph.DefaultTaskPlanExecutor$TaskExecutorWorker.run(DefaultTaskPlanExecutor.java:99)
+	at org.gradle.execution.taskgraph.DefaultTaskPlanExecutor.process(DefaultTaskPlanExecutor.java:60)
+	at org.gradle.execution.taskgraph.DefaultTaskGraphExecuter.execute(DefaultTaskGraphExecuter.java:128)
+	at org.gradle.execution.SelectedTaskExecutionAction.execute(SelectedTaskExecutionAction.java:37)
+	at org.gradle.execution.DefaultBuildExecuter.execute(DefaultBuildExecuter.java:37)
+	at org.gradle.execution.DefaultBuildExecuter.access$000(DefaultBuildExecuter.java:23)
+	at org.gradle.execution.DefaultBuildExecuter$1.proceed(DefaultBuildExecuter.java:43)
+	at org.gradle.execution.DryRunBuildExecutionAction.execute(DryRunBuildExecutionAction.java:46)
+	at org.gradle.execution.DefaultBuildExecuter.execute(DefaultBuildExecuter.java:37)
+	at org.gradle.execution.DefaultBuildExecuter.execute(DefaultBuildExecuter.java:30)
+	at org.gradle.initialization.DefaultGradleLauncher$ExecuteTasks.run(DefaultGradleLauncher.java:311)
+	at org.gradle.internal.progress.DefaultBuildOperationExecutor$RunnableBuildOperationWorker.execute(DefaultBuildOperationExecutor.java:336)
+	at org.gradle.internal.progress.DefaultBuildOperationExecutor$RunnableBuildOperationWorker.execute(DefaultBuildOperationExecutor.java:328)
+	at org.gradle.internal.progress.DefaultBuildOperationExecutor.execute(DefaultBuildOperationExecutor.java:197)
+	at org.gradle.internal.progress.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:107)
+	at org.gradle.initialization.DefaultGradleLauncher.runTasks(DefaultGradleLauncher.java:202)
+	at org.gradle.initialization.DefaultGradleLauncher.doBuildStages(DefaultGradleLauncher.java:132)
+	at org.gradle.initialization.DefaultGradleLauncher.executeTasks(DefaultGradleLauncher.java:107)
+	at org.gradle.internal.invocation.GradleBuildController$1.call(GradleBuildController.java:78)
+	at org.gradle.internal.invocation.GradleBuildController$1.call(GradleBuildController.java:75)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:152)
+	at org.gradle.internal.invocation.GradleBuildController.doBuild(GradleBuildController.java:100)
+	at org.gradle.internal.invocation.GradleBuildController.run(GradleBuildController.java:75)
+	at org.gradle.tooling.internal.provider.ExecuteBuildActionRunner.run(ExecuteBuildActionRunner.java:28)
+	at org.gradle.launcher.exec.ChainingBuildActionRunner.run(ChainingBuildActionRunner.java:35)
+	at org.gradle.tooling.internal.provider.ValidatingBuildActionRunner.run(ValidatingBuildActionRunner.java:32)
+	at org.gradle.launcher.exec.RunAsBuildOperationBuildActionRunner$1.run(RunAsBuildOperationBuildActionRunner.java:43)
+	at org.gradle.internal.progress.DefaultBuildOperationExecutor$RunnableBuildOperationWorker.execute(DefaultBuildOperationExecutor.java:336)
+	at org.gradle.internal.progress.DefaultBuildOperationExecutor$RunnableBuildOperationWorker.execute(DefaultBuildOperationExecutor.java:328)
+	at org.gradle.internal.progress.DefaultBuildOperationExecutor.execute(DefaultBuildOperationExecutor.java:197)
+	at org.gradle.internal.progress.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:107)
+	at org.gradle.launcher.exec.RunAsBuildOperationBuildActionRunner.run(RunAsBuildOperationBuildActionRunner.java:40)
+	at org.gradle.tooling.internal.provider.SubscribableBuildActionRunner.run(SubscribableBuildActionRunner.java:51)
+	at org.gradle.launcher.exec.InProcessBuildActionExecuter.execute(InProcessBuildActionExecuter.java:45)
+	at org.gradle.launcher.exec.InProcessBuildActionExecuter.execute(InProcessBuildActionExecuter.java:29)
+	at org.gradle.launcher.exec.BuildTreeScopeBuildActionExecuter.execute(BuildTreeScopeBuildActionExecuter.java:39)
+	at org.gradle.launcher.exec.BuildTreeScopeBuildActionExecuter.execute(BuildTreeScopeBuildActionExecuter.java:25)
+	at org.gradle.tooling.internal.provider.ContinuousBuildActionExecuter.execute(ContinuousBuildActionExecuter.java:71)
+	at org.gradle.tooling.internal.provider.ContinuousBuildActionExecuter.execute(ContinuousBuildActionExecuter.java:45)
+	at org.gradle.tooling.internal.provider.ServicesSetupBuildActionExecuter.execute(ServicesSetupBuildActionExecuter.java:51)
+	at org.gradle.tooling.internal.provider.ServicesSetupBuildActionExecuter.execute(ServicesSetupBuildActionExecuter.java:32)
+	at org.gradle.tooling.internal.provider.GradleThreadBuildActionExecuter.execute(GradleThreadBuildActionExecuter.java:36)
+	at org.gradle.tooling.internal.provider.GradleThreadBuildActionExecuter.execute(GradleThreadBuildActionExecuter.java:25)
+	at org.gradle.tooling.internal.provider.ParallelismConfigurationBuildActionExecuter.execute(ParallelismConfigurationBuildActionExecuter.java:43)
+	at org.gradle.tooling.internal.provider.ParallelismConfigurationBuildActionExecuter.execute(ParallelismConfigurationBuildActionExecuter.java:29)
+	at org.gradle.tooling.internal.provider.StartParamsValidatingActionExecuter.execute(StartParamsValidatingActionExecuter.java:64)
+	at org.gradle.tooling.internal.provider.StartParamsValidatingActionExecuter.execute(StartParamsValidatingActionExecuter.java:29)
+	at org.gradle.tooling.internal.provider.SessionFailureReportingActionExecuter.execute(SessionFailureReportingActionExecuter.java:55)
+	at org.gradle.tooling.internal.provider.SessionFailureReportingActionExecuter.execute(SessionFailureReportingActionExecuter.java:42)
+	at org.gradle.tooling.internal.provider.SetupLoggingActionExecuter.execute(SetupLoggingActionExecuter.java:58)
+	at org.gradle.tooling.internal.provider.SetupLoggingActionExecuter.execute(SetupLoggingActionExecuter.java:33)
+	at org.gradle.launcher.cli.RunBuildAction.run(RunBuildAction.java:51)
+	at org.gradle.internal.Actions$RunnableActionAdapter.execute(Actions.java:173)
+	at org.gradle.launcher.cli.CommandLineActionFactory$ParseAndBuildAction.execute(CommandLineActionFactory.java:287)
+	at org.gradle.launcher.cli.CommandLineActionFactory$ParseAndBuildAction.execute(CommandLineActionFactory.java:260)
+	at org.gradle.launcher.cli.JavaRuntimeValidationAction.execute(JavaRuntimeValidationAction.java:33)
+	at org.gradle.launcher.cli.JavaRuntimeValidationAction.execute(JavaRuntimeValidationAction.java:24)
+	at org.gradle.launcher.cli.ExceptionReportingAction.execute(ExceptionReportingAction.java:33)
+	at org.gradle.launcher.cli.ExceptionReportingAction.execute(ExceptionReportingAction.java:22)
+	at org.gradle.launcher.cli.CommandLineActionFactory$WithLogging.execute(CommandLineActionFactory.java:253)
+	at org.gradle.launcher.cli.CommandLineActionFactory$WithLogging.execute(CommandLineActionFactory.java:182)
+	at org.gradle.launcher.Main.doAction(Main.java:33)
+	at org.gradle.launcher.bootstrap.EntryPoint.run(EntryPoint.java:45)
+	at org.gradle.launcher.bootstrap.ProcessBootstrap.runNoExit(ProcessBootstrap.java:60)
+	at org.gradle.launcher.bootstrap.ProcessBootstrap.run(ProcessBootstrap.java:37)
+	at org.gradle.launcher.GradleMain.main(GradleMain.java:23)
+	at org.gradle.wrapper.BootstrapMainStarter.start(BootstrapMainStarter.java:31)
+	at org.gradle.wrapper.WrapperExecutor.execute(WrapperExecutor.java:108)
+	at org.gradle.wrapper.GradleWrapperMain.main(GradleWrapperMain.java:61)
+Caused by: : Exception while reading from: /home/pengchy/soft/intermine.4.0/git/fawmine/organisms.xml
+	at org.intermine.dataloader.XmlDataLoaderTask.execute(XmlDataLoaderTask.java:172)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:293)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at org.intermine.plugin.integrate.IntegrateUtils$_closure6.doCall(IntegrateUtils.groovy:144)
+	at org.intermine.plugin.integrate.IntegrateUtils.invokeMethod(IntegrateUtils.groovy)
+	at org.intermine.plugin.integrate.IntegrateUtils$_closure2.doCall(IntegrateUtils.groovy:53)
+	at org.intermine.plugin.integrate.IntegratePlugin$_apply_closure7$_closure20.doCall(IntegratePlugin.groovy:179)
+	at org.gradle.api.internal.AbstractTask$ClosureTaskAction.execute(AbstractTask.java:681)
+	at org.gradle.api.internal.AbstractTask$ClosureTaskAction.execute(AbstractTask.java:656)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter$1.run(ExecuteActionsTaskExecuter.java:122)
+	at org.gradle.internal.progress.DefaultBuildOperationExecutor$RunnableBuildOperationWorker.execute(DefaultBuildOperationExecutor.java:336)
+	at org.gradle.internal.progress.DefaultBuildOperationExecutor$RunnableBuildOperationWorker.execute(DefaultBuildOperationExecutor.java:328)
+	at org.gradle.internal.progress.DefaultBuildOperationExecutor.execute(DefaultBuildOperationExecutor.java:197)
+	at org.gradle.internal.progress.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:107)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeAction(ExecuteActionsTaskExecuter.java:111)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeActions(ExecuteActionsTaskExecuter.java:92)
+	... 92 more
+Caused by: java.lang.IllegalArgumentException: Conflicting values for field Organism.name between faw-gene-expression-Sf21 (value "S. frugiperda" in database with ID 3000002) and entrez-organism (value "Spodoptera frugiperda" being stored). This field needs configuring in the genomic_priorities.properties file
+	at org.intermine.dataloader.SourcePriorityComparator.compare(SourcePriorityComparator.java:278)
+	at org.intermine.dataloader.SourcePriorityComparator.compare(SourcePriorityComparator.java:34)
+	at org.intermine.dataloader.IntegrationWriterDataTrackingImpl.store(IntegrationWriterDataTrackingImpl.java:369)
+	at org.intermine.dataloader.IntegrationWriterAbstractImpl.store(IntegrationWriterAbstractImpl.java:187)
+	at org.intermine.dataloader.XmlDataLoader.processXml(XmlDataLoader.java:82)
+	at org.intermine.dataloader.XmlDataLoaderTask.execute(XmlDataLoaderTask.java:162)
+	... 107 more
+
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 27s
+Wed Feb  5 18:31:04 CST 2020
+
+finished
+
+
+ERROR: 256
+failed with exit code 0: /home/pengchy/soft/intermine.4.0/git/fawmine/gradlew --stacktrace --no-daemon --stacktrace integrate -Psource=entrez-organism
+
+check log: pbuild.log

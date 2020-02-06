@@ -1,0 +1,50 @@
+
+action name                                   time in seconds
+-------------------------------------------------------------
+go                                                       224
+go-dump                                                   10
+interpro                                                  68
+interpro-dump                                             12
+faw-scaffold                                             104
+faw-scaffold-dump                                         21
+faw-gene-gff                                             380
+faw-gene-gff-dump                                         37
+faw-cds                                                   78
+faw-cds-dump                                              37
+go-annotation                                             61
+faw-protein                                              121
+faw-protein2ipr                                          165
+faw-kegg-pathway                                          42
+faw-homolog-rat                                           52
+faw-homolog-caeel                                         52
+faw-homolog-drome                                         60
+faw-homolog-human                                         60
+faw-homolog-mouse                                         45
+faw-homolog-zebrafish                                     61
+faw-homolog-yeast                                         43
+faw-homolog-yeast-dump                                    61
+faw-network-ppi                                          128
+faw-network-coexp                                        315
+faw-network-coexp-dump                                    66
+faw-gene-expression-PRJNA408280                          560
+faw-gene-expression-PRJNA408280-dump                      71
+faw-gene-expression-SE_E-MTAB-6540                       441
+faw-gene-expression-SE_PRJNA299878                       120
+faw-gene-expression-Sf21                                  78
+faw-gene-expression-Sf21-dump                             79
+entrez-organism                                           29
+entrez-organism-dump                                      42
+create-chromosome-locations-and-lengths                  136
+create-references                                        106
+create-location-overlap-index                             23
+create-overlap-view                                       20
+do-sources                                                30
+create-attribute-indexes                                 104
+create-search-index                                      196
+populate-child-features                                   26
+summarise-objectstore                                     69
+summarise-objectstore-dump                                66
+create-autocomplete-index                                 30
+final-dump                                               458
+
+total                                                   4987
