@@ -87,11 +87,11 @@
 			<property name="src.data.file" location="/storage/FAWMine/Expression/SE_E-MTAB-6540.rpkm.xml"/>
 		</source>
 		
-		<source name="faw-gene-expression-SE_PRJNA299878" type="faw-gene-expression" version="4.1.1">
+		<source name="faw-gene-expression-SE_PRJNA299878" type="faw-gene-expression" version="4.1.1" dump="true">
 			<property name="src.data.file" location="/storage/FAWMine/Expression/SE_PRJNA299878.rpkm.xml"/>
 		</source>
 		
-		<source name="faw-gene-expression-Sf21" type="faw-gene-expression" version="4.1.1" dump="true">
+		<source name="faw-gene-expression-Sf21" type="faw-gene-expression" version="4.1.1">
 			<property name="src.data.file" location="/storage/FAWMine/Expression/Sf21.rpkm.xml"/>
 		</source>
 		

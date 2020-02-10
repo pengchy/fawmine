@@ -83,12 +83,12 @@
         </a>
       </li>
 			<li id="jbrowse" <c:if test="${tab == 'jbrowse'}">class="activelink"</c:if>>
-				<a href="http://fawmine.org/jbrowse/JBrowse-1.16.3">
+				<a href="http://insectmine.org/jbrowse/index.html?data=FAWMine" target="_blank">
 					<fmt:message key="menu.jbrowse"/>
 				</a>
 			</li>
 			<li id="blast" <c:if test="${tab == 'blast'}">class="activelink"</c:if>>
-				<a href="http://www.locustmine.org/viroblast/viroblast.php">
+				<a href="http://www.insectmine.org/viroblast/fawmine.php" target="_blank">
 					<fmt:message key="menu.blast"/>
 				</a>
 			</li>

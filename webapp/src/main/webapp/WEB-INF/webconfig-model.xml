@@ -31,21 +31,6 @@
     </fields>
   </class>
 
-  <class className="org.intermine.model.bio.DataSet">
-    <fields>
-      <fieldconfig fieldExpr="name"/>
-      <fieldconfig fieldExpr="url" doNotTruncate="true"/>
-    </fields>
-  </class>
-
-  <class className="org.intermine.model.bio.DataSource">
-    <fields>
-      <fieldconfig fieldExpr="name"/>
-      <fieldconfig fieldExpr="url" doNotTruncate="true"/>
-    </fields>
-    <tabledisplayer src="/model/dataSourceShort.jsp"/>
-  </class>
-
   <class className="org.intermine.model.bio.Gene">
 		<inlinelist>
 			<table path="synonyms.value" showInHeader="true" lineLength="100" />
@@ -76,6 +61,20 @@
 				<fieldconfig fieldExpr="confidence"/>
 			</fields>
 		</class>
+		
+		<class className="org.intermine.model.bio.RNASeqResult">
+			<fields>
+				<fieldconfig fieldExpr="sample.primaryIdentifier" label="Sample"/>
+				<fieldconfig fieldExpr="expressionScore"/>
+				<fieldconfig fieldExpr="gene.primaryIdentifier" label="Gene"/>
+				<fieldconfig fieldExpr="tissue" label="Tissue"/>
+				<fieldconfig fieldExpr="developmentalStage" label="Developmental Stage"/>
+				<fieldconfig fieldExpr="treatment" label="Treatment"/>
+				<fieldconfig fieldExpr="strain" label="Strain"/>
+				<fieldconfig fieldExpr="sample.publication.doi" label="Publication"/>
+			</fields>
+		</class>
+
 		
 		<class className="org.intermine.model.bio.OntologyAnnotation">
 			<fields>
@@ -144,6 +143,13 @@
     </fields>
   </class>
 
+	<class className="org.intermine.model.bio.Pathway">
+		<fields>
+			<fieldconfig fieldExpr="identifier"/>
+			<fieldconfig fieldExpr="name"/>
+		</fields>
+	</class>
+
   <class className="org.intermine.model.bio.Organism">
     <headerconfig>
       <titles>
@@ -168,6 +174,34 @@
       <fieldconfig fieldExpr="length" displayer="/model/sequenceShortDisplayerWithField.jsp" />
     </fields>
   </class>
+	
+	<class className="org.intermine.model.bio.ProteinDomainRegion">
+		<fields>
+			<fieldconfig fieldExpr="proteinDomain.primaryIdentifier"/>
+			<fieldconfig fieldExpr="proteinDomain.name"/>
+			<fieldconfig fieldExpr="identifier"/>
+			<fieldconfig fieldExpr="database"/>
+			<fieldconfig fieldExpr="start"/>
+			<fieldconfig fieldExpr="end"/>
+		</fields> 
+	</class>
+	
+	<class className="org.intermine.model.bio.ProteinDomain">
+		<fields>
+			<fieldconfig fieldExpr="primaryIdentifier"/>
+			<fieldconfig fieldExpr="name"/>
+		</fields>
+	</class>
+
+	
+	<class className="org.intermine.model.bio.Homologue">
+		<fields>
+			<fieldconfig fieldExpr="gene.primaryIdentifier" showInResults="true" showInInlineCollection="false" />
+			<fieldconfig fieldExpr="homologue.primaryIdentifier"/>
+			<fieldconfig fieldExpr="homologue.organism.shortName"/>
+		</fields>
+	</class>
+
 
   <class className="org.intermine.model.bio.Publication">
     <headerconfig>
@@ -215,6 +249,25 @@
       <fieldconfig fieldExpr="chromosomeLocation.end" showInInlineCollection="false" showInSummary="false" />
     </fields>
   </class>
+
+	<!--
+  <class className="org.intermine.model.bio.DataSet">
+    <fields>
+      <fieldconfig fieldExpr="name"/>
+      <fieldconfig fieldExpr="url" doNotTruncate="true"/>
+    </fields>
+  </class>
+
+  <class className="org.intermine.model.bio.DataSource">
+    <fields>
+      <fieldconfig fieldExpr="name"/>
+      <fieldconfig fieldExpr="url" doNotTruncate="true"/>
+    </fields>
+    <tabledisplayer src="/model/dataSourceShort.jsp"/>
+  </class>
+	-->
+
+
 
 <!-- exporters -->
   <tableExportConfig id="sequence" className="org.intermine.bio.web.export.SequenceHttpExporter"/>

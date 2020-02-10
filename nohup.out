@@ -532,3 +532,649 @@ ERROR: 256
 failed with exit code 0: /home/pengchy/soft/intermine.4.0/git/fawmine/gradlew --stacktrace --no-daemon --stacktrace integrate -Psource=faw-protein2ipr
 
 check log: pbuild.log
+reading properties from: /home/pengchy/.intermine/fawmine.properties
+
+Fri Feb  7 23:57:30 CST 2020
+
+
+running: psql -U postgres -h localhost -d postgres -l
+
+not creating fawmine as it already exists
+
+Fri Feb  7 23:57:30 CST 2020
+
+
+building db: /home/pengchy/soft/intermine.4.0/git/fawmine/gradlew --stacktrace --no-daemon --stacktrace builddb
+
+Fri Feb  7 23:57:30 CST 2020
+
+starting command: /home/pengchy/soft/intermine.4.0/git/fawmine/gradlew --stacktrace --no-daemon --stacktrace clean
+
+Fri Feb  7 23:57:36 CST 2020
+
+finished
+
+
+Fri Feb  7 23:57:36 CST 2020
+
+starting command: /home/pengchy/soft/intermine.4.0/git/fawmine/gradlew --stacktrace --no-daemon --stacktrace builddb
+
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Fri Feb  7 23:59:07 CST 2020
+
+finished
+
+
+Fri Feb  7 23:59:07 CST 2020
+
+
+dropping old backup database: dropdb -U postgres -h localhost fawmine:go
+
+Fri Feb  7 23:59:09 CST 2020
+
+
+dropping old backup database: dropdb -U postgres -h localhost fawmine:interpro
+
+Fri Feb  7 23:59:09 CST 2020
+
+
+dropping old backup database: dropdb -U postgres -h localhost fawmine:faw-scaffold
+
+Fri Feb  7 23:59:10 CST 2020
+
+
+dropping old backup database: dropdb -U postgres -h localhost fawmine:faw-gene-gff
+
+Fri Feb  7 23:59:11 CST 2020
+
+
+dropping old backup database: dropdb -U postgres -h localhost fawmine:faw-cds
+
+Fri Feb  7 23:59:13 CST 2020
+
+
+dropping old backup database: dropdb -U postgres -h localhost fawmine:faw-homolog-yeast
+
+Fri Feb  7 23:59:14 CST 2020
+
+
+dropping old backup database: dropdb -U postgres -h localhost fawmine:faw-network-coexp
+
+Fri Feb  7 23:59:15 CST 2020
+
+
+dropping old backup database: dropdb -U postgres -h localhost fawmine:faw-gene-expression-PRJNA408280
+
+Fri Feb  7 23:59:18 CST 2020
+
+
+dropping old backup database: dropdb -U postgres -h localhost fawmine:faw-gene-expression-SE_PRJNA299878
+
+Fri Feb  7 23:59:19 CST 2020
+
+
+dropping old backup database: dropdb -U postgres -h localhost fawmine:entrez-organism
+
+Fri Feb  7 23:59:22 CST 2020
+
+
+dropping old backup database: dropdb -U postgres -h localhost fawmine:summarise-objectstore
+
+Fri Feb  7 23:59:25 CST 2020
+
+starting command: /home/pengchy/soft/intermine.4.0/git/fawmine/gradlew --stacktrace --no-daemon --stacktrace integrate -Psource=go
+
+Sat Feb  8 00:03:36 CST 2020
+
+finished
+
+
+action go took 251 seconds
+
+Sat Feb  8 00:03:36 CST 2020
+
+
+making db copy: createdb -E SQL_ASCII -U postgres -h localhost -T fawmine fawmine:go
+
+Sat Feb  8 00:03:47 CST 2020
+
+finished backup
+
+
+action go-dump took 11 seconds
+
+Sat Feb  8 00:03:47 CST 2020
+
+starting command: /home/pengchy/soft/intermine.4.0/git/fawmine/gradlew --stacktrace --no-daemon --stacktrace integrate -Psource=interpro
+
+Sat Feb  8 00:04:58 CST 2020
+
+finished
+
+
+action interpro took 71 seconds
+
+Sat Feb  8 00:04:58 CST 2020
+
+
+making db copy: createdb -E SQL_ASCII -U postgres -h localhost -T fawmine fawmine:interpro
+
+Sat Feb  8 00:05:12 CST 2020
+
+finished backup
+
+
+action interpro-dump took 14 seconds
+
+Sat Feb  8 00:05:12 CST 2020
+
+starting command: /home/pengchy/soft/intermine.4.0/git/fawmine/gradlew --stacktrace --no-daemon --stacktrace integrate -Psource=faw-scaffold
+
+Sat Feb  8 00:06:56 CST 2020
+
+finished
+
+
+action faw-scaffold took 104 seconds
+
+Sat Feb  8 00:06:56 CST 2020
+
+
+making db copy: createdb -E SQL_ASCII -U postgres -h localhost -T fawmine fawmine:faw-scaffold
+
+Sat Feb  8 00:07:21 CST 2020
+
+finished backup
+
+
+action faw-scaffold-dump took 25 seconds
+
+Sat Feb  8 00:07:21 CST 2020
+
+starting command: /home/pengchy/soft/intermine.4.0/git/fawmine/gradlew --stacktrace --no-daemon --stacktrace integrate -Psource=faw-gene-gff
+
+Sat Feb  8 00:15:08 CST 2020
+
+finished
+
+
+action faw-gene-gff took 467 seconds
+
+Sat Feb  8 00:15:08 CST 2020
+
+
+making db copy: createdb -E SQL_ASCII -U postgres -h localhost -T fawmine fawmine:faw-gene-gff
+
+Sat Feb  8 00:15:55 CST 2020
+
+finished backup
+
+
+action faw-gene-gff-dump took 47 seconds
+
+Sat Feb  8 00:15:55 CST 2020
+
+starting command: /home/pengchy/soft/intermine.4.0/git/fawmine/gradlew --stacktrace --no-daemon --stacktrace integrate -Psource=faw-cds
+
+Sat Feb  8 00:17:24 CST 2020
+
+finished
+
+
+action faw-cds took 89 seconds
+
+Sat Feb  8 00:17:24 CST 2020
+
+
+making db copy: createdb -E SQL_ASCII -U postgres -h localhost -T fawmine fawmine:faw-cds
+
+Sat Feb  8 00:18:05 CST 2020
+
+finished backup
+
+
+action faw-cds-dump took 41 seconds
+
+Sat Feb  8 00:18:05 CST 2020
+
+starting command: /home/pengchy/soft/intermine.4.0/git/fawmine/gradlew --stacktrace --no-daemon --stacktrace integrate -Psource=go-annotation
+
+Sat Feb  8 00:19:13 CST 2020
+
+finished
+
+
+action go-annotation took 68 seconds
+
+Sat Feb  8 00:19:13 CST 2020
+
+starting command: /home/pengchy/soft/intermine.4.0/git/fawmine/gradlew --stacktrace --no-daemon --stacktrace integrate -Psource=faw-protein
+
+Sat Feb  8 00:21:18 CST 2020
+
+finished
+
+
+action faw-protein took 125 seconds
+
+Sat Feb  8 00:21:18 CST 2020
+
+starting command: /home/pengchy/soft/intermine.4.0/git/fawmine/gradlew --stacktrace --no-daemon --stacktrace integrate -Psource=faw-protein2ipr
+
+Sat Feb  8 00:23:33 CST 2020
+
+finished
+
+
+action faw-protein2ipr took 135 seconds
+
+Sat Feb  8 00:23:33 CST 2020
+
+starting command: /home/pengchy/soft/intermine.4.0/git/fawmine/gradlew --stacktrace --no-daemon --stacktrace integrate -Psource=faw-kegg-pathway
+
+Sat Feb  8 00:24:16 CST 2020
+
+finished
+
+
+action faw-kegg-pathway took 43 seconds
+
+Sat Feb  8 00:24:16 CST 2020
+
+starting command: /home/pengchy/soft/intermine.4.0/git/fawmine/gradlew --stacktrace --no-daemon --stacktrace integrate -Psource=faw-homolog-rat
+
+Sat Feb  8 00:25:07 CST 2020
+
+finished
+
+
+action faw-homolog-rat took 51 seconds
+
+Sat Feb  8 00:25:07 CST 2020
+
+starting command: /home/pengchy/soft/intermine.4.0/git/fawmine/gradlew --stacktrace --no-daemon --stacktrace integrate -Psource=faw-homolog-caeel
+
+Sat Feb  8 00:25:56 CST 2020
+
+finished
+
+
+action faw-homolog-caeel took 49 seconds
+
+Sat Feb  8 00:25:56 CST 2020
+
+starting command: /home/pengchy/soft/intermine.4.0/git/fawmine/gradlew --stacktrace --no-daemon --stacktrace integrate -Psource=faw-homolog-drome
+
+Sat Feb  8 00:26:56 CST 2020
+
+finished
+
+
+action faw-homolog-drome took 60 seconds
+
+Sat Feb  8 00:26:56 CST 2020
+
+starting command: /home/pengchy/soft/intermine.4.0/git/fawmine/gradlew --stacktrace --no-daemon --stacktrace integrate -Psource=faw-homolog-human
+
+Sat Feb  8 00:27:55 CST 2020
+
+finished
+
+
+action faw-homolog-human took 59 seconds
+
+Sat Feb  8 00:27:55 CST 2020
+
+starting command: /home/pengchy/soft/intermine.4.0/git/fawmine/gradlew --stacktrace --no-daemon --stacktrace integrate -Psource=faw-homolog-mouse
+
+Sat Feb  8 00:28:41 CST 2020
+
+finished
+
+
+action faw-homolog-mouse took 46 seconds
+
+Sat Feb  8 00:28:41 CST 2020
+
+starting command: /home/pengchy/soft/intermine.4.0/git/fawmine/gradlew --stacktrace --no-daemon --stacktrace integrate -Psource=faw-homolog-zebrafish
+
+Sat Feb  8 00:29:42 CST 2020
+
+finished
+
+
+action faw-homolog-zebrafish took 61 seconds
+
+Sat Feb  8 00:29:42 CST 2020
+
+starting command: /home/pengchy/soft/intermine.4.0/git/fawmine/gradlew --stacktrace --no-daemon --stacktrace integrate -Psource=faw-homolog-yeast
+
+Sat Feb  8 00:30:27 CST 2020
+
+finished
+
+
+action faw-homolog-yeast took 45 seconds
+
+Sat Feb  8 00:30:27 CST 2020
+
+
+making db copy: createdb -E SQL_ASCII -U postgres -h localhost -T fawmine fawmine:faw-homolog-yeast
+
+Sat Feb  8 00:31:39 CST 2020
+
+finished backup
+
+
+action faw-homolog-yeast-dump took 72 seconds
+
+Sat Feb  8 00:31:39 CST 2020
+
+starting command: /home/pengchy/soft/intermine.4.0/git/fawmine/gradlew --stacktrace --no-daemon --stacktrace integrate -Psource=faw-network-ppi
+
+Sat Feb  8 00:33:54 CST 2020
+
+finished
+
+
+action faw-network-ppi took 135 seconds
+
+Sat Feb  8 00:33:54 CST 2020
+
+starting command: /home/pengchy/soft/intermine.4.0/git/fawmine/gradlew --stacktrace --no-daemon --stacktrace integrate -Psource=faw-network-coexp
+
+Sat Feb  8 00:41:16 CST 2020
+
+finished
+
+
+action faw-network-coexp took 442 seconds
+
+Sat Feb  8 00:41:16 CST 2020
+
+
+making db copy: createdb -E SQL_ASCII -U postgres -h localhost -T fawmine fawmine:faw-network-coexp
+
+Sat Feb  8 00:42:21 CST 2020
+
+finished backup
+
+
+action faw-network-coexp-dump took 65 seconds
+
+Sat Feb  8 00:42:21 CST 2020
+
+starting command: /home/pengchy/soft/intermine.4.0/git/fawmine/gradlew --stacktrace --no-daemon --stacktrace integrate -Psource=faw-gene-expression-PRJNA408280
+
+Sat Feb  8 00:54:14 CST 2020
+
+finished
+
+
+action faw-gene-expression-PRJNA408280 took 713 seconds
+
+Sat Feb  8 00:54:14 CST 2020
+
+
+making db copy: createdb -E SQL_ASCII -U postgres -h localhost -T fawmine fawmine:faw-gene-expression-PRJNA408280
+
+Sat Feb  8 00:55:19 CST 2020
+
+finished backup
+
+
+action faw-gene-expression-PRJNA408280-dump took 65 seconds
+
+Sat Feb  8 00:55:19 CST 2020
+
+starting command: /home/pengchy/soft/intermine.4.0/git/fawmine/gradlew --stacktrace --no-daemon --stacktrace integrate -Psource=faw-gene-expression-SE_E-MTAB-6540
+
+Sat Feb  8 01:02:34 CST 2020
+
+finished
+
+
+action faw-gene-expression-SE_E-MTAB-6540 took 435 seconds
+
+Sat Feb  8 01:02:34 CST 2020
+
+starting command: /home/pengchy/soft/intermine.4.0/git/fawmine/gradlew --stacktrace --no-daemon --stacktrace integrate -Psource=faw-gene-expression-SE_PRJNA299878
+
+Sat Feb  8 01:04:36 CST 2020
+
+finished
+
+
+action faw-gene-expression-SE_PRJNA299878 took 122 seconds
+
+Sat Feb  8 01:04:36 CST 2020
+
+
+making db copy: createdb -E SQL_ASCII -U postgres -h localhost -T fawmine fawmine:faw-gene-expression-SE_PRJNA299878
+
+Sat Feb  8 01:06:14 CST 2020
+
+finished backup
+
+
+action faw-gene-expression-SE_PRJNA299878-dump took 98 seconds
+
+Sat Feb  8 01:06:14 CST 2020
+
+starting command: /home/pengchy/soft/intermine.4.0/git/fawmine/gradlew --stacktrace --no-daemon --stacktrace integrate -Psource=faw-gene-expression-Sf21
+
+Sat Feb  8 01:07:30 CST 2020
+
+finished
+
+
+action faw-gene-expression-Sf21 took 76 seconds
+
+Sat Feb  8 01:07:30 CST 2020
+
+starting command: /home/pengchy/soft/intermine.4.0/git/fawmine/gradlew --stacktrace --no-daemon --stacktrace integrate -Psource=entrez-organism
+
+Sat Feb  8 01:07:57 CST 2020
+
+finished
+
+
+action entrez-organism took 27 seconds
+
+Sat Feb  8 01:07:57 CST 2020
+
+
+making db copy: createdb -E SQL_ASCII -U postgres -h localhost -T fawmine fawmine:entrez-organism
+
+Sat Feb  8 01:09:21 CST 2020
+
+finished backup
+
+
+action entrez-organism-dump took 84 seconds
+
+Sat Feb  8 01:09:21 CST 2020
+
+starting command: /home/pengchy/soft/intermine.4.0/git/fawmine/gradlew --stacktrace --no-daemon --stacktrace postprocess -Pprocess=create-chromosome-locations-and-lengths
+
+Sat Feb  8 01:12:40 CST 2020
+
+finished
+
+
+action create-chromosome-locations-and-lengths took 199 seconds
+
+Sat Feb  8 01:12:40 CST 2020
+
+starting command: /home/pengchy/soft/intermine.4.0/git/fawmine/gradlew --stacktrace --no-daemon --stacktrace postprocess -Pprocess=create-references
+
+Sat Feb  8 01:14:26 CST 2020
+
+finished
+
+
+action create-references took 106 seconds
+
+Sat Feb  8 01:14:26 CST 2020
+
+starting command: /home/pengchy/soft/intermine.4.0/git/fawmine/gradlew --stacktrace --no-daemon --stacktrace postprocess -Pprocess=create-location-overlap-index
+
+Sat Feb  8 01:14:48 CST 2020
+
+finished
+
+
+action create-location-overlap-index took 22 seconds
+
+Sat Feb  8 01:14:48 CST 2020
+
+starting command: /home/pengchy/soft/intermine.4.0/git/fawmine/gradlew --stacktrace --no-daemon --stacktrace postprocess -Pprocess=create-overlap-view
+
+Sat Feb  8 01:15:03 CST 2020
+
+finished
+
+
+action create-overlap-view took 15 seconds
+
+Sat Feb  8 01:15:03 CST 2020
+
+starting command: /home/pengchy/soft/intermine.4.0/git/fawmine/gradlew --stacktrace --no-daemon --stacktrace postprocess -Pprocess=do-sources
+
+Sat Feb  8 01:15:25 CST 2020
+
+finished
+
+
+action do-sources took 22 seconds
+
+Sat Feb  8 01:15:25 CST 2020
+
+starting command: /home/pengchy/soft/intermine.4.0/git/fawmine/gradlew --stacktrace --no-daemon --stacktrace postprocess -Pprocess=create-attribute-indexes
+
+Sat Feb  8 01:16:33 CST 2020
+
+finished
+
+
+action create-attribute-indexes took 68 seconds
+
+Sat Feb  8 01:16:33 CST 2020
+
+starting command: /home/pengchy/soft/intermine.4.0/git/fawmine/gradlew --stacktrace --no-daemon --stacktrace postprocess -Pprocess=create-search-index
+
+Sat Feb  8 01:19:42 CST 2020
+
+finished
+
+
+action create-search-index took 189 seconds
+
+Sat Feb  8 01:19:42 CST 2020
+
+starting command: /home/pengchy/soft/intermine.4.0/git/fawmine/gradlew --stacktrace --no-daemon --stacktrace postprocess -Pprocess=populate-child-features
+
+Sat Feb  8 01:20:00 CST 2020
+
+finished
+
+
+action populate-child-features took 18 seconds
+
+Sat Feb  8 01:20:00 CST 2020
+
+starting command: /home/pengchy/soft/intermine.4.0/git/fawmine/gradlew --stacktrace --no-daemon --stacktrace postprocess -Pprocess=summarise-objectstore
+
+Sat Feb  8 01:21:02 CST 2020
+
+finished
+
+
+action summarise-objectstore took 62 seconds
+
+Sat Feb  8 01:21:02 CST 2020
+
+
+making db copy: createdb -E SQL_ASCII -U postgres -h localhost -T fawmine fawmine:summarise-objectstore
+
+Sat Feb  8 01:22:28 CST 2020
+
+finished backup
+
+
+action summarise-objectstore-dump took 86 seconds
+
+Sat Feb  8 01:22:28 CST 2020
+
+starting command: /home/pengchy/soft/intermine.4.0/git/fawmine/gradlew --stacktrace --no-daemon --stacktrace postprocess -Pprocess=create-autocomplete-index
+
+Sat Feb  8 01:22:53 CST 2020
+
+finished
+
+
+action create-autocomplete-index took 25 seconds
+
+Sat Feb  8 01:22:53 CST 2020
+
+
+dumping: pg_dump -F c -i -U postgres -h localhost -f dump/.final fawmine
+
+Sat Feb  8 01:30:36 CST 2020
+
+finished dump
+
+
+action final-dump took 463 seconds
+
+
+action name                                   time in seconds
+-------------------------------------------------------------
+go                                                       251
+go-dump                                                   11
+interpro                                                  71
+interpro-dump                                             14
+faw-scaffold                                             104
+faw-scaffold-dump                                         25
+faw-gene-gff                                             467
+faw-gene-gff-dump                                         47
+faw-cds                                                   89
+faw-cds-dump                                              41
+go-annotation                                             68
+faw-protein                                              125
+faw-protein2ipr                                          135
+faw-kegg-pathway                                          43
+faw-homolog-rat                                           51
+faw-homolog-caeel                                         49
+faw-homolog-drome                                         60
+faw-homolog-human                                         59
+faw-homolog-mouse                                         46
+faw-homolog-zebrafish                                     61
+faw-homolog-yeast                                         45
+faw-homolog-yeast-dump                                    72
+faw-network-ppi                                          135
+faw-network-coexp                                        442
+faw-network-coexp-dump                                    65
+faw-gene-expression-PRJNA408280                          713
+faw-gene-expression-PRJNA408280-dump                      65
+faw-gene-expression-SE_E-MTAB-6540                       435
+faw-gene-expression-SE_PRJNA299878                       122
+faw-gene-expression-SE_PRJNA299878-dump                   98
+faw-gene-expression-Sf21                                  76
+entrez-organism                                           27
+entrez-organism-dump                                      84
+create-chromosome-locations-and-lengths                  199
+create-references                                        106
+create-location-overlap-index                             22
+create-overlap-view                                       15
+do-sources                                                22
+create-attribute-indexes                                  68
+create-search-index                                      189
+populate-child-features                                   18
+summarise-objectstore                                     62
+summarise-objectstore-dump                                86
+create-autocomplete-index                                 25
+final-dump                                               463
+
+total                                                   5471
