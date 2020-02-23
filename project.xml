@@ -5,7 +5,11 @@
   <property name="default.intermine.properties.file" location="../default.intermine.integrate.properties"/>
 
   <sources>
-    <source name="go" type="go" dump="true">
+    <source name="faw-scaffold" type="faw-scaffold" dump="true" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/genome/SfynMstLFRHiC.fa.xml"/>
+    </source>
+
+    <source name="go" type="go">
       <property name="src.data.file" location="/storage/FAWMine/go/go-basic.obo"/>
 			<property name="createrelations" value="false"/>
     </source>
@@ -14,15 +18,349 @@
       <property name="src.data.dir" location="/home/pengchy/Project/LocustMine/interpro/"/>
     </source>
 
-    <source name="faw-scaffold" type="faw-scaffold" dump="true" version="4.1.1">
-			<property name="src.data.file" location="/storage/FAWMine/genome/SfynMstLFRHiC.fa.xml"/>
-    </source>
+		<source name="vcf1" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawaa_aa.xml"/>
+		</source>
+		<source name="vcf2" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawaa_ab.xml"/>
+		</source>
+		<source name="vcf3" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawaa_ac.xml"/>
+		</source>
+		<source name="vcf4" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawaa_ad.xml"/>
+		</source>
+		<source name="vcf5" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawaa_ae.xml"/>
+		</source>
+		<source name="vcf6" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawaa_af.xml"/>
+		</source>
+		<source name="vcf7" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawaa_ag.xml"/>
+		</source>
+		<source name="vcf8" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawaa_ah.xml"/>
+		</source>
+		<source name="vcf9" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawaa_ai.xml"/>
+		</source>
+		<source name="vcf10" type="faw-vcf" dump="true" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawaa_aj.xml"/>
+		</source>
+		<source name="vcf11" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawaa_ak.xml"/>
+		</source>
+		<source name="vcf12" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawab_aa.xml"/>
+		</source>
+		<source name="vcf13" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawab_ab.xml"/>
+		</source>
+		<source name="vcf14" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawab_ac.xml"/>
+		</source>
+		<source name="vcf15" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawab_ad.xml"/>
+		</source>
+		<source name="vcf16" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawab_ae.xml"/>
+		</source>
+		<source name="vcf17" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawab_af.xml"/>
+		</source>
+		<source name="vcf18" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawab_ag.xml"/>
+		</source>
+		<source name="vcf19" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawab_ah.xml"/>
+		</source>
+		<source name="vcf20" type="faw-vcf" dump="true" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawab_ai.xml"/>
+		</source>
+		<source name="vcf21" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawab_aj.xml"/>
+		</source>
+		<source name="vcf22" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawab_ak.xml"/>
+		</source>
+		<source name="vcf23" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawac_aa.xml"/>
+		</source>
+		<source name="vcf24" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawac_ab.xml"/>
+		</source>
+		<source name="vcf25" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawac_ac.xml"/>
+		</source>
+		<source name="vcf26" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawac_ad.xml"/>
+		</source>
+		<source name="vcf27" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawac_ae.xml"/>
+		</source>
+		<source name="vcf28" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawac_af.xml"/>
+		</source>
+		<source name="vcf29" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawac_ag.xml"/>
+		</source>
+		<source name="vcf30" type="faw-vcf" dump="true" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawac_ah.xml"/>
+		</source>
+		<source name="vcf31" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawac_ai.xml"/>
+		</source>
+		<source name="vcf32" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawac_aj.xml"/>
+		</source>
+		<source name="vcf33" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawac_ak.xml"/>
+		</source>
+		<source name="vcf34" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawad_aa.xml"/>
+		</source>
+		<source name="vcf35" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawad_ab.xml"/>
+		</source>
+		<source name="vcf36" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawad_ac.xml"/>
+		</source>
+		<source name="vcf37" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawad_ad.xml"/>
+		</source>
+		<source name="vcf38" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawad_ae.xml"/>
+		</source>
+		<source name="vcf39" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawad_af.xml"/>
+		</source>
+		<source name="vcf40" type="faw-vcf" dump="true" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawad_ag.xml"/>
+		</source>
+		<source name="vcf41" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawad_ah.xml"/>
+		</source>
+		<source name="vcf42" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawad_ai.xml"/>
+		</source>
+		<source name="vcf43" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawad_aj.xml"/>
+		</source>
+		<source name="vcf44" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawad_ak.xml"/>
+		</source>
+		<source name="vcf45" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawae_aa.xml"/>
+		</source>
+		<source name="vcf46" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawae_ab.xml"/>
+		</source>
+		<source name="vcf47" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawae_ac.xml"/>
+		</source>
+		<source name="vcf48" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawae_ad.xml"/>
+		</source>
+		<source name="vcf49" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawae_ae.xml"/>
+		</source>
+		<source name="vcf50" type="faw-vcf" dump="true" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawae_af.xml"/>
+		</source>
+		<source name="vcf51" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawae_ag.xml"/>
+		</source>
+		<source name="vcf52" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawae_ah.xml"/>
+		</source>
+		<source name="vcf53" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawae_ai.xml"/>
+		</source>
+		<source name="vcf54" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawae_aj.xml"/>
+		</source>
+		<source name="vcf55" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawae_ak.xml"/>
+		</source>
+		<source name="vcf56" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawaf_aa.xml"/>
+		</source>
+		<source name="vcf57" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawaf_ab.xml"/>
+		</source>
+		<source name="vcf58" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawaf_ac.xml"/>
+		</source>
+		<source name="vcf59" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawaf_ad.xml"/>
+		</source>
+		<source name="vcf60" type="faw-vcf" dump="true" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawaf_ae.xml"/>
+		</source>
+		<source name="vcf61" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawaf_af.xml"/>
+		</source>
+		<source name="vcf62" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawaf_ag.xml"/>
+		</source>
+		<source name="vcf63" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawaf_ah.xml"/>
+		</source>
+		<source name="vcf64" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawaf_ai.xml"/>
+		</source>
+		<source name="vcf65" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawaf_aj.xml"/>
+		</source>
+		<source name="vcf66" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawaf_ak.xml"/>
+		</source>
+		<source name="vcf67" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawag_aa.xml"/>
+		</source>
+		<source name="vcf68" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawag_ab.xml"/>
+		</source>
+		<source name="vcf69" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawag_ac.xml"/>
+		</source>
+		<source name="vcf70" type="faw-vcf" dump="true" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawag_ad.xml"/>
+		</source>
+		<source name="vcf71" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawag_ae.xml"/>
+		</source>
+		<source name="vcf72" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawag_af.xml"/>
+		</source>
+		<source name="vcf73" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawag_ag.xml"/>
+		</source>
+		<source name="vcf74" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawag_ah.xml"/>
+		</source>
+		<source name="vcf75" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawag_ai.xml"/>
+		</source>
+		<source name="vcf76" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawag_aj.xml"/>
+		</source>
+		<source name="vcf77" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawag_ak.xml"/>
+		</source>
+		<source name="vcf78" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawah_aa.xml"/>
+		</source>
+		<source name="vcf79" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawah_ab.xml"/>
+		</source>
+		<source name="vcf80" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawah_ac.xml"/>
+		</source>
+		<source name="vcf81" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawah_ad.xml"/>
+		</source>
+		<source name="vcf82" type="faw-vcf" dump="true" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawah_ae.xml"/>
+		</source>
+		<source name="vcf83" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawah_af.xml"/>
+		</source>
+		<source name="vcf84" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawah_ag.xml"/>
+		</source>
+		<source name="vcf85" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawah_ah.xml"/>
+		</source>
+		<source name="vcf86" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawah_ai.xml"/>
+		</source>
+		<source name="vcf87" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawah_aj.xml"/>
+		</source>
+		<source name="vcf88" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawah_ak.xml"/>
+		</source>
+		<source name="vcf89" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawai_aa.xml"/>
+		</source>
+		<source name="vcf90" type="faw-vcf" dump="true" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawai_ab.xml"/>
+		</source>
+		<source name="vcf91" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawai_ac.xml"/>
+		</source>
+		<source name="vcf92" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawai_ad.xml"/>
+		</source>
+		<source name="vcf93" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawai_ae.xml"/>
+		</source>
+		<source name="vcf94" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawai_af.xml"/>
+		</source>
+		<source name="vcf95" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawai_ag.xml"/>
+		</source>
+		<source name="vcf96" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawai_ah.xml"/>
+		</source>
+		<source name="vcf97" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawai_ai.xml"/>
+		</source>
+		<source name="vcf98" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawai_aj.xml"/>
+		</source>
+		<source name="vcf99" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawai_ak.xml"/>
+		</source>
+		<source name="vcf100" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawaj_aa.xml"/>
+		</source>
+		<source name="vcf101" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawaj_ab.xml"/>
+		</source>
+		<source name="vcf102" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawaj_ac.xml"/>
+		</source>
+		<source name="vcf103" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawaj_ad.xml"/>
+		</source>
+		<source name="vcf104" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawaj_ae.xml"/>
+		</source>
+		<source name="vcf105" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawaj_af.xml"/>
+		</source>
+		<source name="vcf106" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawaj_ag.xml"/>
+		</source>
+		<source name="vcf107" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawaj_ah.xml"/>
+		</source>
+		<source name="vcf108" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawaj_ai.xml"/>
+		</source>
+		<source name="vcf109" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawaj_aj.xml"/>
+		</source>
+		<source name="vcf110" type="faw-vcf" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawaj_ak.xml"/>
+		</source>
+		<source name="vcf111" type="faw-vcf" dump="true" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/VCF/xml2/fawak.xml"/>
+		</source>
 
     <source name="faw-gene-gff" type="faw-gene-gff" dump="true" version="4.1.1">
 			<property name="src.data.file" location="/storage/FAWMine/genome/gff/Sfr.gff.gtf.exon.gff3.add.desc.gff3.xml"/>
 		</source>
 
-    <source name="faw-cds" type="faw-cds" dump="true" version="4.1.1">
+		<source name="faw-crossreference" type="faw-crossreference" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/CrossRef/CrossReferences.xml"/>
+		</source>
+
+    <source name="faw-cds" type="faw-cds" version="4.1.1">
 			<property name="src.data.file" location="/storage/FAWMine/genome/cds/BGI/Sfr.cds.xml"/>
     </source>
 
@@ -43,6 +381,14 @@
 			<property name="src.data.file" location="/storage/FAWMine/kegg/sfru_bgi.gene.map.txt.xml"/>
     </source>
 
+		<source name="faw-homolog-zebrafish" type="faw-homolog" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/Ortholog/table.zebrafish.pep-Sfr.pep.xml"/>
+		</source>
+		
+		<source name="faw-homolog-yeast" type="faw-homolog" dump="true" version="4.1.1">
+			<property name="src.data.file" location="/storage/FAWMine/Ortholog/table.yeast.fa-Sfr.pep.xml"/>
+		</source>
+		
 		<source name="faw-homolog-rat" type="faw-homolog" version="4.1.1">
 			<property name="src.data.file" location="/storage/FAWMine/Ortholog/table.Rat.pep-Sfr.pep.xml"/>
 		</source>
@@ -51,24 +397,8 @@
 			<property name="src.data.file" location="/storage/FAWMine/Ortholog/table.caeel.fa-Sfr.pep.xml"/>
 		</source>
 		
-		<source name="faw-homolog-drome" type="faw-homolog" version="4.1.1">
-			<property name="src.data.file" location="/storage/FAWMine/Ortholog/table.drome.fa-Sfr.pep.xml"/>
-		</source>
-		
-		<source name="faw-homolog-human" type="faw-homolog" version="4.1.1">
-			<property name="src.data.file" location="/storage/FAWMine/Ortholog/table.human.fa-Sfr.pep.xml"/>
-		</source>
-		
 		<source name="faw-homolog-mouse" type="faw-homolog" version="4.1.1">
 			<property name="src.data.file" location="/storage/FAWMine/Ortholog/table.mouse.pep-Sfr.pep.xml"/>
-		</source>
-		
-		<source name="faw-homolog-zebrafish" type="faw-homolog" version="4.1.1">
-			<property name="src.data.file" location="/storage/FAWMine/Ortholog/table.zebrafish.pep-Sfr.pep.xml"/>
-		</source>
-		
-		<source name="faw-homolog-yeast" type="faw-homolog" dump="true" version="4.1.1">
-			<property name="src.data.file" location="/storage/FAWMine/Ortholog/table.yeast.fa-Sfr.pep.xml"/>
 		</source>
 		
 		<source name="faw-network-ppi" type="faw-network" version="4.1.1">
@@ -83,7 +413,7 @@
 			<property name="src.data.file" location="/storage/FAWMine/Expression/PRJNA408280.rpkm.xml"/>
 		</source>
 		
-		<source name="faw-gene-expression-SE_E-MTAB-6540" type="faw-gene-expression" version="4.1.1">
+		<source name="faw-gene-expression-SE_E-MTAB-6540" type="faw-gene-expression" version="4.1.1" dump="true">
 			<property name="src.data.file" location="/storage/FAWMine/Expression/SE_E-MTAB-6540.rpkm.xml"/>
 		</source>
 		
@@ -91,13 +421,27 @@
 			<property name="src.data.file" location="/storage/FAWMine/Expression/SE_PRJNA299878.rpkm.xml"/>
 		</source>
 		
-		<source name="faw-gene-expression-Sf21" type="faw-gene-expression" version="4.1.1">
+		<source name="faw-gene-expression-Sf21" type="faw-gene-expression" version="4.1.1" dump="true">
 			<property name="src.data.file" location="/storage/FAWMine/Expression/Sf21.rpkm.xml"/>
 		</source>
 		
-    <source name="entrez-organism" type="entrez-organism" dump="true">
+    <source name="entrez-organism" type="entrez-organism">
       <property name="src.data.file" location="/home/pengchy/soft/intermine.4.0/git/fawmine/organisms.xml"/>
     </source>
+		
+		<source name="update-publications" type="update-publications" dump="true">
+			<property name="src.data.file" location="publications.xml"/>
+		</source> 
+
+		<source name="faw-homolog-drome" type="faw-homolog" version="4.1.1">
+		<!--	<property name="src.data.file" location="/storage/FAWMine/Ortholog/table.drome.fa-Sfr.pep.xml"/> -->
+			<property name="src.data.file" location="/storage/FAWMine/Ortholog/table.drome.fa-Sfr.pep.AddFBgn.xml"/>
+		</source>
+		
+		<source name="faw-homolog-human" type="faw-homolog" version="4.1.1" dump="true">
+		<!--	<property name="src.data.file" location="/storage/FAWMine/Ortholog/table.human.fa-Sfr.pep.xml"/> -->
+			<property name="src.data.file" location="/storage/FAWMine/Ortholog/table.human.fa-Sfr.pep.entrez.filt.xml"/>
+		</source>
 
   </sources>
 
