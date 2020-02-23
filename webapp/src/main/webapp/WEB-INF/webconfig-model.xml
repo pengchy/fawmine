@@ -8,7 +8,7 @@
   <class className="org.intermine.model.bio.BioEntity">
     <headerconfig>
       <titles>
-        <title mainTitles="symbol|primaryIdentifier" numberOfMainTitlesToShow="1" subTitles="*organism.shortName*|*organism.strainName*" />
+        <title mainTitles="symbol|primaryIdentifier" numberOfMainTitlesToShow="1" subTitles="*organism.shortName*|[organism.strainName]" />
       </titles>
     </headerconfig>
     <fields>
@@ -96,7 +96,7 @@
     </fields>
   </class>
 
-
+<!--
   <class className="org.intermine.model.bio.SequenceFeature">
     <fields>
       <fieldconfig fieldExpr="primaryIdentifier"/>
@@ -108,6 +108,7 @@
       <fieldconfig fieldExpr="organism.name"/>
     </fields>
   </class>
+	-->
 
   <class className="org.intermine.model.bio.Ontology">
     <fields>
@@ -202,6 +203,28 @@
 		</fields>
 	</class>
 
+	<class className="org.intermine.model.bio.CrossReference">
+		<fields>
+			<fieldconfig fieldExpr="subject.primaryIdentifier" showInResults="true" showInInlineCollection="false" />
+			<fieldconfig fieldExpr="source.name"/>
+			<fieldconfig fieldExpr="identifier"/>
+		</fields>
+	</class>
+
+	  <class className="org.intermine.model.bio.SequenceAlteration ">
+			<fields>
+				<fieldconfig fieldExpr="geneDetail.primaryIdentifier" showInResults="true" showInInlineCollection="false" />
+				<fieldconfig fieldExpr="primaryIdentifier"/>
+				<fieldconfig fieldExpr="referenceSequence" label="Reference"/>
+				<fieldconfig fieldExpr="variantSequence" label="Variation"/>
+				<fieldconfig fieldExpr="chromosome.primaryIdentifier"/>
+				<fieldconfig fieldExpr="locations.start"/>
+				<fieldconfig fieldExpr="positionOnGene"/>
+				<fieldconfig fieldExpr="exonicFunction"/>
+				<fieldconfig fieldExpr="aAChange" label="AminoAcidChange"/>
+			</fields>
+		</class>
+
 
   <class className="org.intermine.model.bio.Publication">
     <headerconfig>
@@ -250,7 +273,6 @@
     </fields>
   </class>
 
-	<!--
   <class className="org.intermine.model.bio.DataSet">
     <fields>
       <fieldconfig fieldExpr="name"/>
@@ -265,7 +287,6 @@
     </fields>
     <tabledisplayer src="/model/dataSourceShort.jsp"/>
   </class>
-	-->
 
 
 
@@ -278,7 +299,7 @@
 	<reportdisplayer javaClass="org.intermine.bio.web.displayer.CytoscapeNetworkDisplayer"
 	                  jspName="model/cytoscapeNetworkDisplayer.jsp"
 										replacesFields="interactions"
-										placement="Genomics"
+										placement="Interactions"
 										types="Gene,Protein"/>
 
 	<reportdisplayer javaClass="org.intermine.bio.web.displayer.JBrowseDisplayer"
@@ -304,6 +325,14 @@
                      replacesFields="chromosome,chromosomeLocation,sequence,length,sequenceOntologyTerm,locations,cytoLocation"
                      placement="summary"
                      types="SequenceFeature"/>
+										 
+		<reportdisplayer javaClass="org.intermine.bio.web.displayer.OverlappingFeaturesDisplayer"
+		                 jspName="model/overlappingFeaturesDisplayer.jsp"
+										 replacesFields="overlappingFeatures"
+										 placement="Genomics"
+										 types="SequenceFeature"/>
+
+
 <!--
     <reportdisplayer javaClass="org.intermine.bio.web.displayer.UniProtCommentsDisplayer"
                      jspName="model/uniProtCommentsDisplayer.jsp"
