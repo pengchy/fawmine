@@ -96,7 +96,6 @@
     </fields>
   </class>
 
-<!--
   <class className="org.intermine.model.bio.SequenceFeature">
     <fields>
       <fieldconfig fieldExpr="primaryIdentifier"/>
@@ -108,7 +107,6 @@
       <fieldconfig fieldExpr="organism.name"/>
     </fields>
   </class>
-	-->
 
   <class className="org.intermine.model.bio.Ontology">
     <fields>
@@ -178,6 +176,7 @@
 	
 	<class className="org.intermine.model.bio.ProteinDomainRegion">
 		<fields>
+      <fieldconfig fieldExpr="protein.primaryIdentifier"/>
 			<fieldconfig fieldExpr="proteinDomain.primaryIdentifier"/>
 			<fieldconfig fieldExpr="proteinDomain.name"/>
 			<fieldconfig fieldExpr="identifier"/>
@@ -210,20 +209,19 @@
 			<fieldconfig fieldExpr="identifier"/>
 		</fields>
 	</class>
-
-	  <class className="org.intermine.model.bio.SequenceAlteration ">
-			<fields>
-				<fieldconfig fieldExpr="geneDetail.primaryIdentifier" showInResults="true" showInInlineCollection="false" />
-				<fieldconfig fieldExpr="primaryIdentifier"/>
-				<fieldconfig fieldExpr="referenceSequence" label="Reference"/>
-				<fieldconfig fieldExpr="variantSequence" label="Variation"/>
-				<fieldconfig fieldExpr="chromosome.primaryIdentifier"/>
-				<fieldconfig fieldExpr="locations.start"/>
-				<fieldconfig fieldExpr="positionOnGene"/>
-				<fieldconfig fieldExpr="exonicFunction"/>
-				<fieldconfig fieldExpr="aAChange" label="AminoAcidChange"/>
-			</fields>
-		</class>
+	
+	<class className="org.intermine.model.bio.SequenceAlteration">
+		<fields>
+			<fieldconfig fieldExpr="primaryIdentifier"/>
+			<fieldconfig fieldExpr="referenceSequence"/>
+			<fieldconfig fieldExpr="variantSequence"/>
+			<fieldconfig fieldExpr="chromosome.primaryIdentifier"/>
+			<fieldconfig fieldExpr="chromosomeLocation.start"/>
+			<fieldconfig fieldExpr="positionOnGene"/>
+			<fieldconfig fieldExpr="exonicFunction"/>
+			<fieldconfig fieldExpr="aAChange"/>
+		</fields>
+	</class>
 
 
   <class className="org.intermine.model.bio.Publication">
@@ -311,7 +309,7 @@
    <reportdisplayer javaClass="org.intermine.bio.web.displayer.GeneOntologyDisplayer"
                      jspName="model/geneOntologyDisplayer.jsp"
                      replacesFields="goAnnotation,ontologyAnnotations"
-                     placement="Genomics"
+                     placement="Function"
                      types="Gene"/>
 
     <reportdisplayer javaClass="org.intermine.bio.web.displayer.GeneStructureDisplayer"
@@ -408,7 +406,7 @@
 											enrichIdentifier="pathways.identifier"
 											constraints="organism.taxonId=[list], primaryIdentifier != null"
 											typeClass="Gene"
-											views="symbol, organism.name, pathways.identifier, pathways.name"
+											views="primaryIdentifier,symbol, organism.name, pathways.identifier, pathways.name"
 											externalLink="http://www.genome.jp/kegg-bin/show_pathway?map=map"/>
 
 			 <bagtabledisplayer id="orthologues" title="Orthologues" pathStrings="Gene.homologues.homologue.organism"
@@ -417,9 +415,8 @@
 											exportField="primaryIdentifier"
 											typeClass="Gene"
 											columnTitle="Genes"
-											views="secondaryIdentifier, symbol, organism.shortName,
+											views="primaryIdentifier, symbol, organism.shortName,
 											       homologues.homologue.primaryIdentifier,
-														 homologues.homologue.symbol,
 														 homologues.homologue.organism.shortName,
 														 homologues.type"/>
 
